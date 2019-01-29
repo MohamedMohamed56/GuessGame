@@ -26,7 +26,7 @@ Written: 1/26/2019.
 
 Revised: 1/27/2019.
 
-Version #3
+Version #4
 
 */
 
@@ -40,6 +40,9 @@ public class GuessGame { // This is our GuessGame class
 		
        int guess; // declaring guess variable as int
        
+       int numberOfTries = 0; // declaring the numberOfTries and setting it to 0.
+
+       
       // Using a do while loop to iterate the multiple guess the uses inputs.
 	do {
 		System.out.print("I'm thinking of a number between 0-100. "); // Displays the user's question about  thinking a number between 0-20.
@@ -50,11 +53,11 @@ public class GuessGame { // This is our GuessGame class
 				
 		if(guess == number)  // if guess is correct the the user gets it correct.
 			
-	             System.out.println("You Got it!");
+            System.out.println("You Got it in " + numberOfTries + " tries.! ");
 			
 		else if (guess < number) // if the guess is less than the number then the it will be too low and would have to try again.
 			
-                    System.out.println("Nope. " + "Too Low. " + "Try Again: " + guess);
+            System.out.println("Nope. " + "Too Low. " + "Try Again: " + guess);
 
          else if (guess > number) // if the guess is greater then it will be too high and the user will have to try again.
 			
